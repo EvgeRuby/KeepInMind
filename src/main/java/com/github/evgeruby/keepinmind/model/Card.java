@@ -1,7 +1,6 @@
 package com.github.evgeruby.keepinmind.model;
 
 
-
 import javax.persistence.*;
 
 @Entity
