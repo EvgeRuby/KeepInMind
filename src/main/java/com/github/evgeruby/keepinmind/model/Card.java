@@ -12,6 +12,19 @@ public class Card {
     private String term;
     private String definition;
 
+    @ManyToOne
+    @JoinColumn(name="STUDYSET_ID", nullable=false, updatable=false)
+    private StudySet studySet;
+
+    public long getId() {
+        return id;
+    }
+
+    public Card setId(long id) {
+        this.id = id;
+        return this;
+    }
+
     public String getTerm() {
         return term;
     }
@@ -27,6 +40,15 @@ public class Card {
 
     public Card setDefinition(String definition) {
         this.definition = definition;
+        return this;
+    }
+
+    public StudySet getStudySet() {
+        return studySet;
+    }
+
+    public Card setStudySet(StudySet studySet) {
+        this.studySet = studySet;
         return this;
     }
 }
