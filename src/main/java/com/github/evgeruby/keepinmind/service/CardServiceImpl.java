@@ -30,7 +30,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Card save(AddCardRequest request) {
-        if (cardRepository.findByName(request.getTerm()).isPresent()){
+        if (cardRepository.findByTerm(request.getTerm()).isPresent()){
             throw new BadRequestException();
         }
         Card card = new Card();
